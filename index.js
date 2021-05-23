@@ -20,7 +20,7 @@ readdirSync('./Commands').forEach(folder => {
 
 readdirSync('./Events').forEach(folder => {
   readdirSync(`./Events/${folder}`).forEach(file => {
-    const event = require(`./Events/${folder}/${file}`);
+    const event = require(`./E=events/${file}/${folder}`);
     client.on(file.split('.')[0], event.bind(null, client));
   });
 });
